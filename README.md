@@ -74,7 +74,7 @@ $ docker rm ${CONTAINER_ID}
 
 # Note
 
--` buildspec.yml`は`Code Build`で`AWS ECR`へPUSHする為の設定ファイルである。
+- `buildspec.yml`は`Code Build`で`AWS ECR`へPUSHする為の設定ファイルである。
 
 <br>
 
