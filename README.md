@@ -16,11 +16,11 @@
 
 - `AWS CodeBuild`を使用する場合は、`buildspec.yml`へ`Docker Hub` の`USER_ID`, `USER_PASS`をそれぞれ入力する。
 <br>
-**但しMFAを有効化している場合は`Docker Hub`で`AccessToken`を発行し`DOCKERHUB_PASS`へ入力する。**
+    **但しMFAを有効化している場合は`Docker Hub`で`AccessToken`を発行し`DOCKERHUB_PASS`へ入力する。**
 <br>
-参考URL:
+    参考URL:
 <br>
-https://dev.classmethod.jp/articles/codebuild-has-to-use-dockerhub-login-to-avoid-ip-gacha/
+    https://dev.classmethod.jp/articles/codebuild-has-to-use-dockerhub-login-to-avoid-ip-gacha/
 
 ```yml
 phases:
