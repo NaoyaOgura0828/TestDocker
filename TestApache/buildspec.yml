@@ -3,9 +3,13 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      # ECR へのログイン
       - echo Logging in to Amazon ECR...
       - aws ecr get-login --region ${AWS_DEFAULT_REGION}
       - aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com
+      # Docker Hub へのログイン
+      - echo Logging in to Docker Hub...
+      - echo ${DOCKERHUB_PASS} | docker login -u ${DOCKERHUB_USER} --password-stdin # DOCKERHUB_PASS, DOCKERHUB_USER をそれぞれ入力する
   build:
     commands:
       - echo Build started on `date`
