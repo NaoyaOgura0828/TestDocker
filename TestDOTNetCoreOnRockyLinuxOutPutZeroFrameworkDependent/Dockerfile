@@ -1,21 +1,8 @@
 # RockyLinux 8.5 Install
 FROM rockylinux/rockylinux:8.5
 
-# # GNU Wget Install
-# RUN apt-get update && \
-#     apt-get install wget -y && \
-#     rm -rf /var/lib/apt/lists/*
-
-# #  Linux Software Repository for Microsoft Products Install
-# RUN wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && \
-#     dpkg -i packages-microsoft-prod.deb && \
-#     rm packages-microsoft-prod.deb
-
-# # ASP.NET Core Runtime Install
-# RUN apt-get update && \
-#     apt-get install apt-transport-https -y && \
-#     apt-get update && \
-#     apt-get install aspnetcore-runtime-6.0 -y
+# runtime Install
+RUN dnf install aspnetcore-runtime-6.0 -y
 
 # WORK_DIR 作成・移動・設定
 RUN mkdir WORK_DIR && \
