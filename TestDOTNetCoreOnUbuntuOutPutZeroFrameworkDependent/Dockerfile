@@ -15,7 +15,7 @@ RUN wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-p
 RUN apt-get update && \
     apt-get install apt-transport-https -y && \
     apt-get update && \
-    apt-get install aspnetcore-runtime-6.0-y
+    apt-get install aspnetcore-runtime-6.0 -y
 
 # WORK_DIR 作成・移動・設定
 RUN mkdir WORK_DIR && \
