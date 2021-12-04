@@ -8,6 +8,8 @@
 以下のVersionで検証済みである。
 - AmazonLinux2 (AWS EC2)
 - Ubuntu20.04 (WSL2)
+- Windows10 21H1 (実機)
+- AWS Fargate (Amazon ECS)
 
 <br>
 
@@ -75,6 +77,7 @@ $ docker rm ${CONTAINER_ID}
 # Note
 
 - `buildspec.yml`は`Code Build`で`AWS ECR`へPUSHする為の設定ファイルである。
+- 2021-12-04現在 `TestDOTNetCoreOnAlpineLinuxOutPutZeroFrameworkDependent`は動作不可 (Bashが正常に動作しない)
 
 <br>
 
